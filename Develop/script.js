@@ -13,6 +13,7 @@ const specialCharacters = "!@#$%^&*()?";
 
 // Write password to the #password input
 
+let createdPassword = "";
 function generatePassword() {
   //take in what user wants to use
   upperPrompt = window.prompt("Do you want to use uppercase letters?", "y/n");
@@ -22,11 +23,27 @@ function generatePassword() {
   lengthPrompt = window.prompt("How long would you like your password to be?", )
 
   //create list of all characters usable for user
+if (upperPrompt === "y") {
+  upperPrompt += uppercaseLetters;
+}
 
+if (lowerPrompt === "y") {
+  lowerPrompt += lowercaseLetters;
+}
+
+if (numberPrompt === "y") {
+  numberPrompt += numbers;
+}
+
+if (specialPrompt === "y") {
+  specialPrompt += specialCharacters;
+}
 
   //choosing characters for password
+for (let i = 0; i< lengthPrompt; i ++);
 
   //return created password
+  return createdPassword;
 }
 
 function writePassword() {
