@@ -1,5 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+
 let upperPrompt = "";
 let lowerPrompt = "";
 let numberPrompt = "";
@@ -20,7 +21,8 @@ function generatePassword() {
   lowerPrompt = window.prompt("Do you want to use lowercase letters?", "y/n" );
   numberPrompt = window.prompt("Do you want to use numbers?", "y/n");
   specialPrompt = window.prompt("Do you want to use special characters?", "y/n");
-  lengthPrompt = window.prompt("How long would you like your password to be?", )
+  lengthPrompt = window.prompt("How long would you like your password to be?", );
+
 
   //create list of all characters usable for user
 if (upperPrompt === "y") {
@@ -38,11 +40,18 @@ if (numberPrompt === "y") {
 if (specialPrompt === "y") {
   specialPrompt += specialCharacters;
 }
+let characters = upperPrompt + lowerPrompt + numberPrompt + specialPrompt;
 
-  //choosing characters for password
-for (let i = 0; i< lengthPrompt; i ++);
 
-  //return created password
+
+//   //choosing characters for password
+for (let i = 0; i< lengthPrompt; i ++); {
+  createdPassword += characters.charAt(
+    Math.floor(Math.random() * characters.length)
+  );
+}
+
+// //   //return created password
   return createdPassword;
 }
 
