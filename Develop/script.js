@@ -131,8 +131,6 @@ function generatePassword() {
   //usable characters for password
   userChoices = getInput()
   console.log(userChoices.length)
-  //length=choiceArray[0];
-  //console.log(length);
   let pwd = ''
   length = userChoices.length;
   massArray = []
@@ -163,20 +161,7 @@ function generatePassword() {
 console.log(length);
   pwd += randomizer(length, massArray);
   console.log(pwd);
-  //pwdArray = pwd.split('');
-  //console.log(pwdArray);
-  //pwdArray =  shuffle(pwdArray);
-  //console.log(pwdArray);
   return pwd
-
-  //   //choosing characters for password
-  // for (let i = 1; i<= lengthPrompt.value; i ++); {
-  //   parseInt(lengthPrompt);
-  //   createdPassword += characters.charAt(
-  //     Math.floor(Math.random() * characters.length)
-  //   );
-  // let char = Math.floor(Math.random() * characters.length +1);
-  // createdPassword += characters.charAt(char);
 }
 
 function randomizer(numChars, charArray) {
@@ -189,18 +174,8 @@ function randomizer(numChars, charArray) {
     returnString += charArray[Math.floor(Math.random() * charArray.length)]
     console.log(returnString)
   }
-  return returnString
+  return returnString;
 }
-// for (let i = 1; i<= lengthPrompt.value; i ++); {
-//   parseInt(lengthPrompt);
-//   createdPassword += characters.charAt(
-//     Math.floor(Math.random() * characters.length)
-//   );
-// let char = Math.floor(Math.random() * characters.length +1);
-// createdPassword += characters.charAt(char);
-
-// //   //return created password
-// return createdPassword;
 
 function writePassword() {
   var password = generatePassword()
